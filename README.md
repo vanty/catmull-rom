@@ -1,1 +1,1 @@
-# catmull-rom
+# catmull-rom algorithm with canvas
