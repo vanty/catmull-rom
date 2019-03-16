@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Catmull-Rom algorithm with Canvas</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="jquery-ui/development-bundle/themes/base/jquery.ui.all.css">
+		<link rel="stylesheet" type="text/css" href="jquery-ui/development-bundle/demos/demos.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery-ui/development-bundle/ui/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="jquery-ui/development-bundle/ui/jquery.ui.mouse.js"></script>
+		<script type="text/javascript" src="jquery-ui/development-bundle/ui/jquery.ui.slider.js"></script>
+	</head>
+	<body>
+		<div id="holder">
+			<canvas id="canvas" height="500" width="740" class="bezier"></canvas>
+			<div id="options">
+				
+				<table id="options_table">
+					<tr>
+						<td colspan="2">
+							<input type="checkbox" id="show_spline" name="show_spline" checked /> 
+							<label for="show_spline">Show spline</label>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">
+							<input type="checkbox" id="show_lines" name="show_lines" checked />
+							 <label for="show_lines">Show lines</label>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">Change the value of t </td>
+					</tr>	
+					<tr>
+						<td class="slider-holder"><div id="change_t"></div></td>
+						<td><span class="slider-result" id="t_value">t = 0.5</span></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">Change the width of lines </td>
+					</tr>	
+					<tr>
+						<td class="slider-holder"><div id="change_line_width"></div></td>
+						<td><span class="slider-result" id="line_width_value">lineWidth = 1.0</span></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2">Change the width of spline </td>
+					</tr>	
+					<tr>
+						<td class="slider-holder"><div id="change_spline_width"></div></td>
+						<td><span class="slider-result" id="spline_width_value">splineWidth = 0.7</span></td>
+					</tr>
+						
+					<tr>
+						<td colspan="2">Change the radius of control points </td>
+					</tr>	
+					<tr>
+						<td class="slider-holder"><div id="change_control_point_radius"></div></td>
+						<td><span class="slider-result" id="control_point_radius_value">radius = 10.0</span></td>
+					</tr>
+					
+					<tr>
+						<td colspan="2" align="center"><input type="button" name="clear" value="clear"></td>
+					</tr>	
+				</table>
+				
+				<div class="description">
+					<p>Browser Support:</p>
+					<ul>
+						<li>Mozila Firefox</li>
+						<li>Google Chrome</li>
+						<li>Internet Explorer 9</li>
+						<li>Opera</li>
+						<li>Safari</li>	
+					</ul>	
+				</div>
+				
+			</div>
+			<div id="footer">
+				<div id="title"> Catmull-Rom spline algorithm </div>
+				<div id="author"> Ivan Borisov 2012 </div>
+			</div>	
+		</div>
+		<script type="text/javascript" src="catmull-rom.js"></script>
+	</body>
+</html>
